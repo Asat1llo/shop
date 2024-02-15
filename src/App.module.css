@@ -34,3 +34,7 @@ button {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.layoutStyle{
+  border-radius: 8px;
+}

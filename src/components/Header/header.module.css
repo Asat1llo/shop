@@ -1,5 +1,7 @@
-.titleHeader{
-	font-size: 30px;
-	font-weight: 600;
-	font-family: sans-serif;
+.headerStyle{
+    min-width: 100%;
+	text-align: center;
+    color: #fff;
+    min-height: 10vh;
+    background-color: #4096ff;
 }

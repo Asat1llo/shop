@@ -1,6 +1,8 @@
-.titleFooter{
-	font-size: 30px;
-	font-weight: 600;
-	font-family: sans-serif;
+.footerStyle{
+    min-width: 100%;
+    min-height: 10vh;
+    text-align: center;
+    color: #fff;
+    background-color: #4096ff;
 }
 
