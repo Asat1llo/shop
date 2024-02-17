@@ -98,6 +98,7 @@
 
 .headerLabelOptions:hover{
     color: rgb(58, 98, 156);
+    cursor: pointer;
 }
 
 

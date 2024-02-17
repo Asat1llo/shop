@@ -1,0 +1,18 @@
+
+
+.mySwiper{
+    height: 197px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.sliderImg{
+    width: 400px;
+    height: 197px;
+}
+  

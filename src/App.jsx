@@ -1,5 +1,5 @@
 import './App.css'
-import {Header, Content, Footer} from './components/index.jsx'
+import {Header, Slider ,Content, Footer} from './components/index.jsx'
 
 
 function App() {
@@ -7,8 +7,9 @@ function App() {
   return (
     <div className='layoutStyle'>
       <Header/>
+      <Slider/>
       {/* <Content/> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
