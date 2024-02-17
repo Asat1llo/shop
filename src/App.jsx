@@ -1,14 +1,14 @@
-import classes from './App.module.css'
+import './App.css'
 import {Header, Content, Footer} from './components/index.jsx'
 
 
 function App() {
 
   return (
-    <div className={classes.layoutStyle}>
+    <div className='layoutStyle'>
       <Header/>
-      <Content/>
-      <Footer />
+      {/* <Content/> */}
+      {/* <Footer /> */}
     </div>
   )
 }
