@@ -43,16 +43,7 @@ export function Header(){
             <div className={classes.headerContainerImg}>
               <img src={logo} alt="logo" className={classes.headerLogo} />
             </div>
-            <Menu
-          style={{
-          width: 256,
-          boxShadow:'none',
-          border:'none',
-          backgroundColor:'transparent',
-        }}
-        mode="inline"
-        items={items}
-            />
+            <Menu rootClassName={classes.headerMenu} mode="inline" items={items}/>
             </div>
             <div className={classes.headerItems}>
               <div className={classes.headerBin}>
@@ -64,15 +55,28 @@ export function Header(){
                <span className={classes.headerBurgerItems}></span>
                <span className={classes.headerBurgerItems}></span>
               </div>
-              <div className={classes.headerBin}>
+              <div   className={classes.headerBin}>
                <img src={bin} alt="bin" />
                 <span className={classes.headerBinCounter}>0</span>
               </div>
             </div>
-            <Drawer title="Basic Drawer" onClose={onClose} open={open}>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+            <Drawer title='Select phone brand' onClose={onClose}   open={open}>
+            <label className={classes.headerDrawerLabel}>Samsung</label>
+            <option className={classes.headerLabelOptions}  value="1">opetion 1</option>
+            <option className={classes.headerLabelOptions} value="1">opetion 2</option>
+            <option className={classes.headerLabelOptions} value="1">opetion 3</option>
+            <label  className={classes.headerDrawerLabel}>Apple</label>
+            <option className={classes.headerLabelOptions} value="1">opetion 1</option>
+            <option className={classes.headerLabelOptions} value="1">opetion 2</option>
+            <option className={classes.headerLabelOptions} value="1">opetion 3</option>
+            <label  className={classes.headerDrawerLabel}>Xiaomi</label>
+            <option className={classes.headerLabelOptions} value="1">opetion 1</option>
+            <option className={classes.headerLabelOptions} value="1">opetion 2</option>
+            <option className={classes.headerLabelOptions} value="1">opetion 3</option>
+          <div className={classes.headerFavorites}>
+              <img src={favorites} alt="favorites" />
+              <span className={classes.headerFavoritesCounter}>favorites</span>
+         </div>
             </Drawer>
           </div>
         </div>
