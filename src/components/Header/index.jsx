@@ -1,6 +1,6 @@
 import classes from './header.module.css'
 import { Menu,Drawer } from 'antd';
-import {logo, phone, samsung, apple,xiaomi, bin, favorites} from './../../assets/assets.jsx'
+import {logo, phone, samsung, apple,xiaomi, bin, favorites,servis,contact,language} from './../../assets/assets.jsx'
 import { useState } from 'react';
 
 
@@ -61,22 +61,38 @@ export function Header(){
               </div>
             </div>
             <Drawer title='Select phone brand' onClose={onClose}   open={open}>
-            <label className={classes.headerDrawerLabel}>Samsung</label>
-            <option className={classes.headerLabelOptions}  value="1">opetion 1</option>
-            <option className={classes.headerLabelOptions} value="1">opetion 2</option>
-            <option className={classes.headerLabelOptions} value="1">opetion 3</option>
-            <label  className={classes.headerDrawerLabel}>Apple</label>
-            <option className={classes.headerLabelOptions} value="1">opetion 1</option>
-            <option className={classes.headerLabelOptions} value="1">opetion 2</option>
-            <option className={classes.headerLabelOptions} value="1">opetion 3</option>
-            <label  className={classes.headerDrawerLabel}>Xiaomi</label>
-            <option className={classes.headerLabelOptions} value="1">opetion 1</option>
-            <option className={classes.headerLabelOptions} value="1">opetion 2</option>
-            <option className={classes.headerLabelOptions} value="1">opetion 3</option>
-          <div className={classes.headerFavorites}>
+            <label className={classes.menuDrawerLabel}>Samsung</label>
+            <option className={classes.menuLabelOptions}  value="1">opetion 1</option>
+            <option className={classes.menuLabelOptions} value="1">opetion 2</option>
+            <option className={classes.menuLabelOptions} value="1">opetion 3</option>
+            <label  className={classes.menuDrawerLabel}>Apple</label>
+            <option className={classes.menuLabelOptions} value="1">opetion 1</option>
+            <option className={classes.menuLabelOptions} value="1">opetion 2</option>
+            <option className={classes.menuLabelOptions} value="1">opetion 3</option>
+            <label  className={classes.menuDrawerLabel}>Xiaomi</label>
+            <option className={classes.menuLabelOptions} value="1">opetion 1</option>
+            <option className={classes.menuLabelOptions} value="1">opetion 2</option>
+            <option className={classes.menuLabelOptions} value="1">opetion 3</option>
+           <div className={classes.menuFavorites}>
               <img src={favorites} alt="favorites" />
               <span className={classes.headerFavoritesCounter}>favorites</span>
-         </div>
+           </div>
+           <div className={classes.menuFavorites}>
+            <img src={servis} alt="servis" />
+            <span className={classes.menuFavoritesCounter}>Terms of service</span>
+           </div>
+           <div className={classes.menuFavorites}>
+            <img src={contact} alt="contact" />
+            <span className={classes.menuFavoritesCounter}>Contacts</span>
+           </div>
+           <div className={classes.menuFavorites}>
+            <img src={language} alt="launguage" />
+            <span className={classes.menuLanguageContainer}>
+            <span className={classes.menuLanguage}>en</span>
+            <span className={classes.menuLanguage}>ru</span>
+            <span className={classes.menuLanguage}>uz</span>
+            </span>
+           </div>
             </Drawer>
           </div>
         </div>

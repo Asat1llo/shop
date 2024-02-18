@@ -64,7 +64,7 @@
     background-color:transparent;
 }
 
-.headerFavorites{
+.menuFavorites{
     width: 150px;
     height: 30px;
     display: flex;
@@ -75,30 +75,37 @@
     border:none;
     border-radius: 10px;
 }
-.headerFavorites:hover{
+.menuFavorites:hover{
     background-color: whitesmoke;
 }
-.headerFavoritesCounter{
+.menuFavoritesCounter{
     color: #000;
 }
 
 
-.headerDrawerLabel{
+.menuDrawerLabel{
  font-size: 17px;
  line-height: 18.29px;
  color: #101010;
 }
-.headerLabelOptions{
+.menuLabelOptions{
     font-weight: 500;
     line-height: 18.29px;
 }
-.headerLabelOptions:active{
+.menuLabelOptions:active{
     color: #FFA542;
 }
 
-.headerLabelOptions:hover{
+.menuLabelOptions:hover{
     color: rgb(58, 98, 156);
     cursor: pointer;
+}
+
+.menuLanguageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
 }
 
 

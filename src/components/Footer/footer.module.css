@@ -53,3 +53,36 @@
 .footerLanguages:hover{
     color: #FFA542;
 }
+
+
+/* ==================================================Media======================================= */
+
+
+@media(max-width:768px){
+    .footerLinks:nth-child(2){
+        display: none;
+    }
+}
+
+@media(max-width:425px){
+    .footerLinks{
+        display: none;
+    }
+}
+
+@media(max-width:375px){
+    .footerWrraper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        padding-bottom: 5px;
+    }
+    .footerContainerWebs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7vw;
+    }
+}
