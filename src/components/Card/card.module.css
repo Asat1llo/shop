@@ -1,0 +1,64 @@
+
+.cardWrraper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 21px 32px 22px;
+    border-radius: 30px;
+    background-color: #ffff;
+}
+
+.cardContainerFavorites{
+    min-width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.cardContainerImg{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.cardContainerDesc{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: start;
+ gap: 2vw;
+}
+
+.cardContainerItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+}
+
+.cardName{
+    font-weight: bold;
+    line-height: 17px;
+    color: #1C1C27;
+}
+
+.cardPrice{
+    color: #FFA542;
+    line-height: 17px;
+    font-weight: bold;
+}
+
+.cardContainerRating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.cardRatingNumber{
+    color: #838383;
+    font-weight: bold;
+    line-height: 17px;
+}

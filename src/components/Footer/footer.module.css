@@ -64,6 +64,12 @@
     }
 }
 
+@media(max-width:554px){
+    .footerStyle{
+        display: none;
+    }
+}
+
 @media(max-width:425px){
     .footerLinks{
         display: none;

@@ -1,7 +1,9 @@
 import classes from './header.module.css'
-import { Menu,Drawer } from 'antd';
-import {logo, phone, samsung, apple,xiaomi, bin, favorites,servis,contact,language} from './../../assets/assets.jsx'
+import { Menu } from 'antd';
+import { Menu as Drawer} from './../index.jsx'
+import {logo, phone, samsung, apple,xiaomi, bin, favorites} from './../../assets/assets.jsx'
 import { useState } from 'react';
+import { NavLink as Link } from 'react-router-dom';
 
 
 
@@ -40,9 +42,11 @@ export function Header(){
         <div className='container'>
           <div className={classes.headerWrraper}>
             <div className={classes.headerContainer}>
+            <Link to={'/'}>
             <div className={classes.headerContainerImg}>
               <img src={logo} alt="logo" className={classes.headerLogo} />
             </div>
+            </Link>
             <Menu rootClassName={classes.headerMenu} mode="inline" items={items}/>
             </div>
             <div className={classes.headerItems}>
@@ -60,40 +64,7 @@ export function Header(){
                 <span className={classes.headerBinCounter}>0</span>
               </div>
             </div>
-            <Drawer title='Select phone brand' onClose={onClose}   open={open}>
-            <label className={classes.menuDrawerLabel}>Samsung</label>
-            <option className={classes.menuLabelOptions}  value="1">opetion 1</option>
-            <option className={classes.menuLabelOptions} value="1">opetion 2</option>
-            <option className={classes.menuLabelOptions} value="1">opetion 3</option>
-            <label  className={classes.menuDrawerLabel}>Apple</label>
-            <option className={classes.menuLabelOptions} value="1">opetion 1</option>
-            <option className={classes.menuLabelOptions} value="1">opetion 2</option>
-            <option className={classes.menuLabelOptions} value="1">opetion 3</option>
-            <label  className={classes.menuDrawerLabel}>Xiaomi</label>
-            <option className={classes.menuLabelOptions} value="1">opetion 1</option>
-            <option className={classes.menuLabelOptions} value="1">opetion 2</option>
-            <option className={classes.menuLabelOptions} value="1">opetion 3</option>
-           <div className={classes.menuFavorites}>
-              <img src={favorites} alt="favorites" />
-              <span className={classes.headerFavoritesCounter}>favorites</span>
-           </div>
-           <div className={classes.menuFavorites}>
-            <img src={servis} alt="servis" />
-            <span className={classes.menuFavoritesCounter}>Terms of service</span>
-           </div>
-           <div className={classes.menuFavorites}>
-            <img src={contact} alt="contact" />
-            <span className={classes.menuFavoritesCounter}>Contacts</span>
-           </div>
-           <div className={classes.menuFavorites}>
-            <img src={language} alt="launguage" />
-            <span className={classes.menuLanguageContainer}>
-            <span className={classes.menuLanguage}>en</span>
-            <span className={classes.menuLanguage}>ru</span>
-            <span className={classes.menuLanguage}>uz</span>
-            </span>
-           </div>
-            </Drawer>
+           <Drawer onClose={onClose} open={open}/>
           </div>
         </div>
       </header> 

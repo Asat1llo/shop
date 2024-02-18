@@ -1,8 +1,10 @@
+import { Content,Slider } from './../../components/index.jsx'
 
-export const Home = () => {
-    return (
-        <>
-            <h3></h3>
-        </>
-    )
+export default function index() {
+  return (
+   <>
+    <Slider/>
+    <Content/>
+   </>
+  )
 }

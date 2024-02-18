@@ -31,13 +31,9 @@ button {
 
 .container {
   max-width: 100%;
-  width: 1110px;
+  width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 
-
-.layoutStyle{
-  border-radius: 8px;
-}

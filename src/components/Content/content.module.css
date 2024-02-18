@@ -1,0 +1,14 @@
+
+.contentStyle{
+    padding: 2vw 0vw 3vw 0vw ;
+}
+
+
+.contentWrraper{
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: start;
+    gap: 1vw;
+}

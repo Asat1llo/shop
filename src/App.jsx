@@ -1,16 +1,20 @@
 import './App.css'
-import {Header, Slider ,Content, Footer} from './components/index.jsx'
+import { Route, Routes } from 'react-router-dom'
+import { Home, Inner } from './pages/index.jsx'
+import { Header,Footer } from './components/index.jsx'
 
 
 function App() {
 
   return (
-    <div className='layoutStyle'>
-      <Header/>
-      <Slider/>
-      {/* <Content/> */}
-      <Footer />
-    </div>
+       <>
+       <Header/>
+       <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/inner' element={<Inner/>}/>
+       </Routes>
+       <Footer/>
+       </>     
   )
 }
 

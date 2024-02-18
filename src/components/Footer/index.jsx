@@ -1,5 +1,6 @@
 import classes from './footer.module.css'
 import {logo,wk,instagram,telegram,whatsapp,language} from './../../assets/assets.jsx'
+import { NavLink as Link } from 'react-router-dom'
 
 
 
@@ -8,9 +9,11 @@ export  function Footer(){
         <footer className={classes.footerStyle}>
             <div className="container">
                 <div className={classes.footerWrraper}>
+                    <Link to={'/'}>
                     <div className={classes.footerContainerLogo}>
                         <img src={logo} alt="logo" className={classes.footerLogo} />
                     </div>
+                    </Link>
                     <ul className={classes.footerList}>
                         <li className={classes.footerLinks}>
                             <p className={classes.footerLinksPages}>Favorites</p>

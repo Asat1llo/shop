@@ -1,3 +1,3 @@
-export { Home } from './Home'
-export { Movie } from "./Movie"
+export { default as Home } from './Home'
+export { default as Inner} from './cardInner'
 
