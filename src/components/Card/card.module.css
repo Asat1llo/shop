@@ -1,5 +1,6 @@
 
 .cardWrraper{
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,4 +62,11 @@
     color: #838383;
     font-weight: bold;
     line-height: 17px;
+}
+
+
+@media(max-width:546px){
+    .cardWrraper{
+
+    }
 }
