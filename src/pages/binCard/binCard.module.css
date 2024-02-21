@@ -1,0 +1,62 @@
+
+.cardWrraper{
+    max-width: 633px;
+    background-color: #FFFF;
+    padding: 15px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1vw;
+}
+
+
+.cardContainerDelete{
+    min-width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.cardContainerImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.cardContainerName{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 1px;
+}
+
+
+.cardWrraperCounter{
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardContainerCounter{
+    max-width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.cardPlus{
+    max-width: 50px;
+    max-height: 60px;
+    padding: 5px 8px 5px 8px;
+    border-radius: 50%;
+    background-color: rgb(255, 123, 0);
+    color: #FFFF;
+}
+

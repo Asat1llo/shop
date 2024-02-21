@@ -1,5 +1,5 @@
 import classes from './footer.module.css'
-import {logo,wk,instagram,telegram,whatsapp,language} from './../../assets/assets.jsx'
+import {logo,wk,instagram,telegram,whatsapp,language} from '../../assets/assets.jsx'
 import { NavLink as Link } from 'react-router-dom'
 
 

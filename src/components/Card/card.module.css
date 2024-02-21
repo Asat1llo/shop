@@ -67,6 +67,6 @@
 
 @media(max-width:546px){
     .cardWrraper{
-
+      max-width: 350px;
     }
 }

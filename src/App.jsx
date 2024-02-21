@@ -1,6 +1,6 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import { Home, Inner } from './pages/index.jsx'
+import { Home, Inner,Bin } from './pages/index.jsx'
 import { Header,Footer } from './components/index.jsx'
 
 
@@ -12,6 +12,7 @@ function App() {
        <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/inner' element={<Inner/>}/>
+        <Route path='/bin' element={<Bin/>}/>
        </Routes>
        <Footer/>
        </>     

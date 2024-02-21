@@ -1,5 +1,5 @@
 import classes from './card.module.css'
-import {favorites,cardimg,rating} from './../../assets/assets.jsx'
+import {favorites,cardimg,rating} from '../../assets/assets.jsx'
 
 
 export  function Card() {

@@ -1,7 +1,7 @@
 import classes from './header.module.css'
 import { Menu } from 'antd';
-import { Menu as Drawer} from './../index.jsx'
-import {logo, phone, samsung, apple,xiaomi, bin, favorites} from './../../assets/assets.jsx'
+import { Menu as Drawer} from '../index.jsx'
+import {logo, phone, samsung, apple,xiaomi, bin, favorites} from '../../assets/assets.jsx'
 import { useState } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 

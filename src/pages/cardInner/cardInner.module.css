@@ -144,9 +144,11 @@
 @media(max-width:546px){
     .innerContainerdescriptions{
         display: flex;
+        flex-direction: column;
+        background-color: red;
         justify-content: center;
         align-items: center;
-        gap: 10vw;
+        gap: 10rem;
         padding-top: 10px;
     }
   .innerContainerBtn{
@@ -165,7 +167,11 @@
     display: flex;
   }
   .innerWrraper{
-    padding-bottom: 0px;
+    gap: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;    
 }
 }
 

@@ -1,5 +1,5 @@
 import classes from './content.module.css'
-import {Card} from './../index.jsx'
+import {Card} from '../index.jsx'
 import { NavLink as Link } from 'react-router-dom'
 
 

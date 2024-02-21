@@ -2,7 +2,7 @@ import classes from './slider.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import {abrand, sbrand, xbrand} from './../../assets/assets.jsx'
+import {abrand, sbrand, xbrand} from '../../assets/assets.jsx'
 
 
 
