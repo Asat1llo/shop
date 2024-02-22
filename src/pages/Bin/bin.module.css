@@ -1,0 +1,80 @@
+
+.binWrraper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 2vw 0vw 14.8vw 0vw;
+    gap: 1vw;
+}
+
+.binContainerItems{
+    min-width: 100%;;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1vw;
+}
+
+.binContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1vw;
+}
+
+.binParagref{
+    color: #1C1C27;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+
+
+.binContainerTotalPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.binWrraperTotalPrice{
+    min-width: 348px;
+    display: flex;
+    background-color: #FFFF;
+    flex-direction: column;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 21px 0px 0 px 0px;
+
+}
+.binContainerTotalValue{
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    background-color: #FFFF;
+    border-radius: 30px;
+    padding: 5px 17px 15px 17px;
+}
+
+.binTotal{
+    color: 000000;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.binTotalValue{
+    color: 000000;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.binTotalBtn{
+    min-width: 348px;
+    border-radius: 30px;
+    padding: 22px 14px 22px 14px;
+    background-color: #101010;
+    color: #FFFF; 
+}
