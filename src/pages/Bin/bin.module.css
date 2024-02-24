@@ -13,15 +13,15 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    gap: 1vw;
 }
 
 .binContainer{
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    gap: 1vw;
+    gap: 1.5vw;
 }
 
 .binParagref{
@@ -33,13 +33,14 @@
 
 
 .binContainerTotalPrice{
+    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
 .binWrraperTotalPrice{
-    min-width: 348px;
+    min-width: 40%;
     display: flex;
     background-color: #FFFF;
     flex-direction: column;
@@ -77,4 +78,33 @@
     padding: 22px 14px 22px 14px;
     background-color: #101010;
     color: #FFFF; 
+}
+
+
+/* ==================================Media============================= */
+
+@media (max-width:975px){
+    .binContainerItems{
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: start;
+      gap: 5vw;
+    }
+    .binContainer{
+        min-width: 100%;
+    }
+
+    .binContainerTotalPrice{
+        padding-right: 15px;
+        min-width: 100%;
+    }
+}
+
+@media(max-width:425px){
+    .binContainerTotalPrice{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

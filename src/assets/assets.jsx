@@ -28,3 +28,5 @@ export { default as apple3} from './img/apple-phone2.png'
 export { default as delet} from './svg/card/delete.svg'
 export { default as plus }  from './svg/card/plus.svg'
 export { default as minus}  from './svg/card/minus.svg'
+export { default as locationn} from './svg/card/headerlocation.svg'
+

@@ -1,8 +1,12 @@
 import classes from './bin.module.css'
-
 import { Card } from './../index.jsx'
 
+
 export default function Bin() {
+
+
+      
+
   return (
       <div className={classes.bin}>
       <div className="container">
@@ -19,7 +23,7 @@ export default function Bin() {
           <div className={classes.binWrraperTotalPrice}>
             <div className={classes.binContainerTotalValue}>
               <span className={classes.binTotal}>TOTAL</span>
-              <span className={classes.binTotalValue}>$ 2 927</span>
+              <span className={classes.binTotalValue}>$ 2.927</span>
             </div>
             <button className={classes.binTotalBtn}>Next</button>
           </div>

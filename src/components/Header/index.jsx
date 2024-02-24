@@ -1,14 +1,18 @@
 import classes from './header.module.css'
 import { Menu } from 'antd';
 import { Menu as Drawer} from '../index.jsx'
-import {logo, phone, samsung, apple,xiaomi, bin, favorites} from '../../assets/assets.jsx'
+import {logo, phone, samsung, apple,xiaomi, bin, favorites,locationn} from '../../assets/assets.jsx'
 import { useState } from 'react';
-import { NavLink as Link } from 'react-router-dom';
+import { NavLink as Link ,useLocation } from 'react-router-dom';
+import { calc } from 'antd/es/theme/internal.js';
 
 
 
 
 export function Header(){
+
+ const uselocation = useLocation()
+ const location = uselocation.pathname
 
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -36,7 +40,6 @@ export function Header(){
   ];
 
 
-
     return(
       <header className={classes.headerStyle}>
         <div className='container'>
@@ -44,13 +47,23 @@ export function Header(){
             <div className={classes.headerContainer}>
             <Link to={'/'}>
             <div className={classes.headerContainerImg}>
-              <img src={logo} alt="logo" className={classes.headerLogo} />
+              { 
+              location == '/bin' ? (
+              <div className={classes.headerContainerLocation}>
+                <img className={classes.headerLocationImg} src={locationn} alt="location" />
+                <span className={classes.headerLocation}>Bin</span>
+                </div>
+                ) : 
+              location == '/' ? 
+              (<img src={logo} alt="logo" className={classes.headerLogo} />) 
+              : (<img src={logo} alt="logo" className={classes.headerLogo} />) 
+              }
             </div>
             </Link>
             <Menu rootClassName={classes.headerMenu} mode="inline" items={items}/>
             </div>
             <div className={classes.headerItems}>
-              <div className={classes.headerBin}>
+              <div className={classes.headerFavorites}>
               <img src={favorites} alt="favorites" />
               <span className={classes.headerBinCounter}>0</span>
               </div>
@@ -59,10 +72,12 @@ export function Header(){
                <span className={classes.headerBurgerItems}></span>
                <span className={classes.headerBurgerItems}></span>
               </div>
-              <div   className={classes.headerBin}>
+              <Link to={'/bin'}>
+              <div className={classes.headerBin}>
                <img src={bin} alt="bin" />
                 <span className={classes.headerBinCounter}>0</span>
               </div>
+              </Link>
             </div>
            <Drawer onClose={onClose} open={open}/>
           </div>

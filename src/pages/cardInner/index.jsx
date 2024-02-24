@@ -1,11 +1,13 @@
 import classes from './cardInner.module.css'
 import { Collapse } from 'antd';
-
+import { NavLink as Link } from 'react-router-dom'
 import { favorites, inner,bin2,whatsap,apple2,apple3 } from '../../assets/assets.jsx'
 
-export default function cardInner() {
 
-    const text = `
+export default function cardInner() {
+ 
+  
+  const text = `
   A dog is a type of domesticated animal.
   Known for its loyalty and faithfulness,
   it can be found as a welcome guest in many households across the world.
@@ -46,10 +48,12 @@ export default function cardInner() {
                           <img src={whatsap} alt="whatsapp" className={classes.innerBtnWatssapImg} />
                     </div>
                       <button className={classes.innerBtnBuy}>Buy!</button>
-                      <div className={classes.innerBtnBin}>
+                      <Link to={'/bin'}>
+                      <div className={classes.innerBtnBin} >
                         <img src={bin2} alt="bin" className={classes.innerBin} />
                         <p className={classes.innerBtnText}>Add to Bin</p>
                         </div>
+                      </Link>
                     </div>
                 </div>
             </div>

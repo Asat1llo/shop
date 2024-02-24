@@ -4,8 +4,8 @@
 
 
 .cardWrraper{
-    min-width: 570px;
-    background-color: #FFFF;
+    min-width: 98%;
+    background-color:#FFFF;
     padding: 15px;
     border-radius: 30px;
     display: flex;
@@ -72,3 +72,5 @@
     color: #1C1C27;
     font-weight: 600;
 }
+
+/* =======================================Media================================ */
