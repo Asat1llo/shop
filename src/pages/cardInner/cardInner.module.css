@@ -40,8 +40,8 @@
 }
 
 .innerImages{
-    min-width:284px;
-    min-height: 283px;
+    max-width:284px;
+    max-height: 283px;
 }
 .innerMainImage{
     max-width: 284px;

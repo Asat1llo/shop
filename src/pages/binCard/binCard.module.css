@@ -30,6 +30,11 @@
     gap: 1vw;
 }
 
+.binImage{
+    width: 146px;
+    height: 136px;
+}
+
 .cardContainerName{
     display: flex;
     flex-direction: column;
