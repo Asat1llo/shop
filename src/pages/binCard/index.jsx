@@ -1,16 +1,21 @@
 import classes from './binCard.module.css'
-import { apple3, delet, minus,plus } from './../../assets/assets.jsx'
-import { useSelector } from 'react-redux'
+import { delet, minus,plus } from './../../assets/assets.jsx'
+import { useSelector,useDispatch } from 'react-redux'
+import { removelocal } from '../../store/localSlice.js'
 
 
 
-export default function binCard({ item,dec,inc}) {
+export default function binCard({ item,dec,inc,setRefresh}) {
 
-  const {value,valueproduct} = useSelector((state)=>state.count)  
+  const {value,valueproduct} = useSelector((state)=>state.count) 
+  const dispatch = useDispatch()
 
   return (
     <div className={classes.cardWrraper}>
-        <div className={classes.cardContainerDelete}>
+        <div className={classes.cardContainerDelete} onClick={()=>{
+          dispatch(removelocal(item.id))
+          setRefresh(true)
+          }} >
             <img src={delet} alt="delete" />
         </div>
         <div className={classes.cardContainerImage}>

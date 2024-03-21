@@ -67,12 +67,10 @@ export default function cardInner() {
                           <img src={whatsap} alt="whatsapp" className={classes.innerBtnWatssapImg} />
                     </div>
                       <button className={classes.innerBtnBuy}>Buy!</button>
-                      <Link to={'/bin'}>
                       <div className={classes.innerBtnBin} onClick={addLocal} >
                         <img src={bin2} alt="bin" className={classes.innerBin} />
                         <p className={classes.innerBtnText}>Add to Bin</p>
                         </div>
-                      </Link>
                     </div>
                 </div>
             </div>

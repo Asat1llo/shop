@@ -4,8 +4,6 @@ import { Menu as Drawer} from '../index.jsx'
 import {logo, phone, samsung, apple,xiaomi, bin, favorites,locationn} from '../../assets/assets.jsx'
 import { useState } from 'react';
 import { NavLink as Link ,useLocation } from 'react-router-dom';
-import { calc } from 'antd/es/theme/internal.js';
-
 
 
 
