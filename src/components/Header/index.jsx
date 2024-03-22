@@ -4,12 +4,14 @@ import { Menu as Drawer} from '../index.jsx'
 import {logo, phone, samsung, apple,xiaomi, bin, favorites,locationn} from '../../assets/assets.jsx'
 import { useState } from 'react';
 import { NavLink as Link ,useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 
 export function Header(){
 
  const uselocation = useLocation()
+ const {data} = useSelector(state=>state.local)
  const location = uselocation.pathname
 
   const [open, setOpen] = useState(false);
@@ -73,7 +75,7 @@ export function Header(){
               <Link to={'/bin'}>
               <div className={classes.headerBin}>
                <img src={bin} alt="bin" />
-                <span className={classes.headerBinCounter}>0</span>
+                <span className={classes.headerBinCounter}>{data.length}</span>
               </div>
               </Link>
             </div>

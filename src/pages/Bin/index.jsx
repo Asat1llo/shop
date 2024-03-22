@@ -1,27 +1,24 @@
 import classes from './bin.module.css'
-import { Card } from './../index.jsx'
+import { Card, Empty } from './../index.jsx'
 import { decrement,increment} from '../../store/count.js';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
-import { fetchLocal } from '../../store/localSlice.js';
 
 
 export default function Bin() {
 
-  const [refresh,setRefresh] = useState(false)
 
   const dispatch = useDispatch()
-  useEffect(()=>{
-    dispatch(fetchLocal())
-  },[refresh])
+ 
 
-  const {data} = useSelector(state=>state.local)
+  const {data,status} = useSelector(state=>state.local)
   
   const dec = ()=> dispatch(decrement())
   const inc = ()=> dispatch(increment())
 
-
-  return (
+  if(data.length === 0 && status == 'loading' && 'error'){
+    return <Empty/>
+  } 
+  else return (
       <div className={classes.bin}>
       <div className="container">
       <div className={classes.binWrraper}>
@@ -29,7 +26,7 @@ export default function Bin() {
             <div className={classes.binContainerItems}>
             <div className={classes.binContainer}>
               {
-                data?.map(item=> <Card item={item} key={item.id} inc={inc} dec={dec} setRefresh={setRefresh}/>)
+                data?.map(item=> <Card item={item} key={item.id} inc={inc} dec={dec}/>)
               }
             </div>
             <div className={classes.binContainerTotalPrice}>

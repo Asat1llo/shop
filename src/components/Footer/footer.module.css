@@ -1,9 +1,7 @@
-
-
 .footerWrraper{
     min-width: 100%;
     display: flex;
-    background-color: #fff;
+    background-color: #FFFF;
     justify-content: space-between;
     align-items: start;
     padding: 29px 29px 32px 29px;

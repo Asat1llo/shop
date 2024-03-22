@@ -1,0 +1,14 @@
+
+
+.emptyWrraper{
+    min-width: 100%;
+    min-height: 69vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyWrraperImg{
+    /* min-width: 100%;
+    min-height: 100%; */
+}
