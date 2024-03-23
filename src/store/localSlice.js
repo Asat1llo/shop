@@ -3,12 +3,14 @@ import {createSlice,createAsyncThunk} from '@reduxjs/toolkit'
 const initialState = {
     data:[],
     status:'',
-    refresh:false,
 }
 
 export const fetchLocal = createAsyncThunk(
     'local/fetchLocal',
     async()=>{
+       if(localStorage.getItem('data')==null){
+            localStorage.setItem('data','[]') 
+        }
        const localData = JSON.parse(localStorage.getItem('data'))
        return localData
     }
@@ -18,9 +20,10 @@ const localSlice = createSlice({
     name:'local',
     initialState,
     reducers:{
-        refresh:(state,action)=>{
-            state.refresh = action.payload
-        }
+        remove:(state,action)=>{
+         state.data = state.data.filter(item =>item.id !== action.payload)
+         localStorage.setItem('data',JSON.stringify(state.data))
+        }   
     },
     extraReducers:(builder)=>{
      builder.addCase(fetchLocal.pending,(state)=>{
@@ -36,5 +39,5 @@ const localSlice = createSlice({
     }
 })
 
-export const {refresh} = localSlice.actions
+export const {remove} = localSlice.actions
 export default localSlice.reducer

@@ -3,22 +3,20 @@ import { Menu } from 'antd';
 import { Menu as Drawer} from '../index.jsx'
 import {logo, phone, samsung, apple,xiaomi, bin, favorites,locationn} from '../../assets/assets.jsx'
 import { useState } from 'react';
-import { NavLink as Link ,useLocation } from 'react-router-dom';
+import { NavLink as Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 
 
 export function Header(){
 
- const uselocation = useLocation()
  const {data} = useSelector(state=>state.local)
- const location = uselocation.pathname
 
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
   };
-  const onClose = () => {
+  const onClose = () => { 
     setOpen(false);
   };
 

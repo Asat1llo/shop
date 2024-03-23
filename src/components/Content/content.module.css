@@ -8,7 +8,35 @@
     min-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
-    align-items: start;
-    gap: 1vw;
+    justify-content:center;
+    align-items:center;
+    gap: 4vw;
+}
+
+@media (max-width:1024px){
+    .contentWrraper{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+    }
+}
+
+
+
+@media (max-width:768px){
+    .contentWrraper{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 1vw;
+    }
+}
+
+@media (max-width:425px){
+    .contentWrraper{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 2vw;
+    }
 }

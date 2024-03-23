@@ -1,6 +1,5 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
-const defaultValue = 1
 const initialState = {
     value:1,
     valueproduct:0,
@@ -22,11 +21,11 @@ const countSlice = createSlice({
     initialState,
     reducers:{
         increment:(state)=>{
-            state.value += defaultValue
+            state.value += 1
         },
         decrement:(state)=>{
-          state.value == defaultValue ? state.value = defaultValue : state.value -= defaultValue
-        },
+          state.value == 1 ? state.value = 1 : state.value -= 1
+        }
     },
     extraReducers:(builder)=>{
         builder.addCase(fetchData.pending,(state)=>{

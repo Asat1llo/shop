@@ -121,6 +121,7 @@
     font-weight: normal;
     border-radius: 10px;
     gap: 1vw;
+    cursor: pointer;
 }
 
 .innerBtnWatssap{
