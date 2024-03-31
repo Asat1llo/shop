@@ -1,0 +1,23 @@
+
+
+.contactWrraper{
+display:flex;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+gap: 61px;
+padding-bottom: 37px;
+}
+
+.contactContainerOffice{
+ padding: 15px 19px 27px 17px;
+ background-color: #FFFF;
+ border-radius: 20px;
+}
+
+.contactOfficeIframe{
+ min-width: 722px;
+ min-height: 424px;
+ border-radius: 10px;
+ border: none;
+}

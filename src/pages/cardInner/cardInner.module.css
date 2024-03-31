@@ -208,8 +208,8 @@
     }
 
     .innerImages{
-        min-width: 61px;
-       min-height: 64px;
+       width: 70px;
+       height: 70px;
     }
     .innerImages:nth-child(1){
         display: none;

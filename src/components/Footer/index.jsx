@@ -29,10 +29,14 @@ export  function Footer(){
                         <li className={classes.footerLinks}>
                             <p className={classes.footerLinksPages}>{ldata[lang].footer.favorites}</p>
                             <p className={classes.footerLinksPages}>{ldata[lang].footer.bin}</p>
+                            <Link to={'/contact'}>
                             <p className={classes.footerLinksPages}>{ldata[lang].footer.contact}</p>
+                            </Link>
                         </li>
                         <li className={classes.footerLinks}>
+                            <Link to={'/condition'}>
                             <p className={classes.footerLinksTextPages}>{ldata[lang].footer.terms}</p>
+                            </Link>
                             <div className={classes.footerContainerLanguage}>
                             <img src={language} alt="earth" className={classes.footerLanguageImg} />
                             <span className={classes.footerLanguages} onClick={()=>givelang('en')}>en</span>

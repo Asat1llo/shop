@@ -2,7 +2,7 @@ import './App.css'
 import { useDispatch,useSelector } from 'react-redux';
 import { useEffect, useState} from 'react';
 import { Route, Routes } from 'react-router-dom'
-import { Home, Inner,Bin } from './pages/index.jsx'
+import { Home, Inner,Bin, Conditions, Contact } from './pages/index.jsx'
 import { Header,Footer } from './components/index.jsx'
 import { fetchLocal} from './store/localSlice.js';
 
@@ -22,6 +22,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/inner/:cardId' element={<Inner setRefresh={setRefresh}/>}/>
         <Route path='/bin' element={<Bin/>}/>
+        <Route path='/condition' element={<Conditions/>}/>
+        <Route path='/contact' element={<Contact/>}/>
        </Routes>
        <Footer/>
        </>     

@@ -52,6 +52,15 @@
     color: #FFA542;
 }
 
+.footerLinksPages{
+ color: #000000;
+ cursor: pointer;
+}
+.footerLinksTextPages{
+ color: #000000;
+ cursor: pointer;
+}
+
 
 /* ==================================================Media======================================= */
 

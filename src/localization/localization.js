@@ -17,8 +17,11 @@ export const language = {
     bin:{
     next:'Следующий',
     total:'ОБЩИЙ',
-    }
+    back:'В каталог товаров',
     },
+    },
+
+
     en:{
     header:{
     brand:'Select phone brand',
@@ -37,8 +40,11 @@ export const language = {
     bin:{
     next:'Next',
     total:'ToTAl',
+    back:'To product catalog'
     }  
     },
+
+
     uz:{
     header:{
     brand:'Telefon markasini tanlang',
@@ -57,6 +63,7 @@ export const language = {
     bin:{
     next:'Keyingisi',
     total:'Jami',
+    back:'Mahsulotlar katalogiga'
     } 
     }
 }
