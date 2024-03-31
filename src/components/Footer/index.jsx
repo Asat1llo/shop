@@ -1,10 +1,21 @@
 import classes from './footer.module.css'
 import {logo,wk,instagram,telegram,whatsapp,language} from '../../assets/assets.jsx'
 import { NavLink as Link } from 'react-router-dom'
-
+import {language as ldata } from '../../localization/localization.js'
+import { useDispatch, useSelector } from 'react-redux'
+import { changelang } from '../../store/launguage.js'
 
 
 export  function Footer(){
+
+
+    const {lang} = useSelector(state=>state.lang)
+    const dispatch = useDispatch()
+
+    const givelang = (til)=>{
+        dispatch(changelang(til))
+    }
+
     return(
         <footer className={classes.footerStyle}>
             <div className="container">
@@ -16,17 +27,17 @@ export  function Footer(){
                     </Link>
                     <ul className={classes.footerList}>
                         <li className={classes.footerLinks}>
-                            <p className={classes.footerLinksPages}>Favorites</p>
-                            <p className={classes.footerLinksPages}>Bin</p>
-                            <p className={classes.footerLinksPages}>Contacts</p>
+                            <p className={classes.footerLinksPages}>{ldata[lang].footer.favorites}</p>
+                            <p className={classes.footerLinksPages}>{ldata[lang].footer.bin}</p>
+                            <p className={classes.footerLinksPages}>{ldata[lang].footer.contact}</p>
                         </li>
                         <li className={classes.footerLinks}>
-                            <p className={classes.footerLinksTextPages}>Terms of service</p>
+                            <p className={classes.footerLinksTextPages}>{ldata[lang].footer.terms}</p>
                             <div className={classes.footerContainerLanguage}>
                             <img src={language} alt="earth" className={classes.footerLanguageImg} />
-                            <span className={classes.footerLanguages}>en</span>
-                            <span className={classes.footerLanguages}>ru</span>
-                            <span className={classes.footerLanguages}>uz</span>
+                            <span className={classes.footerLanguages} onClick={()=>givelang('en')}>en</span>
+                            <span className={classes.footerLanguages} onClick={()=>givelang('ru')}>ru</span>
+                            <span className={classes.footerLanguages} onClick={()=>givelang('uz')}>uz</span>
                             </div>
                         </li>
                     </ul>

@@ -5,12 +5,14 @@ import {logo, phone, samsung, apple,xiaomi, bin, favorites,locationn} from '../.
 import { useState } from 'react';
 import { NavLink as Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import {language as ldata } from '../../localization/localization.js'
 
 
 
 export function Header(){
 
  const {data} = useSelector(state=>state.local)
+ const {lang} = useSelector(state=>state.lang)
 
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -30,7 +32,7 @@ export function Header(){
     };
   }
   const items = [
-    getItem('Select phone brand', 'sub1', <img src={phone} alt="phone" />, [
+    getItem(ldata[lang].header.brand, 'sub1', <img src={phone} alt="phone" />, [
       getItem( 'Samsung', 'sub2', <img src={samsung} alt="samsung" />, [getItem('Option 1', '2'), getItem('Option 3', '3')]),
       getItem('Apple', 'sub3', <img src={apple} alt="apple" />, [getItem('Option 4', '4'), getItem('Option 5', '5')]),
       getItem('Xiaomi', 'sub4', <img src={xiaomi} alt="xiaomi" />, [getItem('Option 6', '6'), getItem('Option 7', '7')]),
@@ -46,15 +48,7 @@ export function Header(){
             <Link to={'/'}>
             <div className={classes.headerContainerImg}>
               { 
-              location == '/bin' ? (
-              <div className={classes.headerContainerLocation}>
-                <img className={classes.headerLocationImg} src={locationn} alt="location" />
-                <span className={classes.headerLocation}>Bin</span>
-                </div>
-                ) : 
-              location == '/' ? 
-              (<img src={logo} alt="logo" className={classes.headerLogo} />) 
-              : (<img src={logo} alt="logo" className={classes.headerLogo} />) 
+              <img src={logo} alt="logo" className={classes.headerLogo} />
               }
             </div>
             </Link>
