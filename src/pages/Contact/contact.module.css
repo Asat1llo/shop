@@ -2,17 +2,34 @@
 
 .contactWrraper{
 display:flex;
-flex-wrap: nowrap;
+flex-direction: column;
 justify-content: center;
-align-items: center;
-gap: 61px;
+align-items: start;
+gap: 44px;
 padding-bottom: 37px;
 }
 
+.contactContainer{
+ display: flex;
+ justify-content: center;
+ align-items: start;
+ gap: 61px;
+}
+
 .contactContainerOffice{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: start;
  padding: 15px 19px 27px 17px;
  background-color: #FFFF;
  border-radius: 20px;
+ gap: 15px;
+}
+
+.contactOfficeTitle{
+ font-size: 17px;
+ color: 1C1C27;
 }
 
 .contactOfficeIframe{
@@ -20,4 +37,54 @@ padding-bottom: 37px;
  min-height: 424px;
  border-radius: 10px;
  border: none;
+}
+
+.contactOfficeAddres{
+ display: flex;
+ justify-content: center;
+ align-items: start;
+ gap:8px;
+}
+
+.contactOfficeTextaddred{
+ display: flex;
+ flex-direction: column;
+ justify-content:center;
+ align-items: start; 
+}
+
+.contactOfficeAddresStreet{
+ color: #000000;
+}
+.contactOfficeAddresHome{
+ color: 838383;
+ font-size: 13px;
+}
+
+
+.contactMedia{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: start;
+ gap: 14px;
+}
+
+.contactMediaItems{
+ padding: 29px;
+ background-color: #FFFFFF;
+ border-radius: 30px;
+}
+
+
+.contactPhoneNumber{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 28px;
+}
+
+.contactNumber{
+ font-size: 25px;
+ color: #000000;
 }

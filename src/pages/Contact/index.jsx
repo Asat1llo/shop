@@ -1,5 +1,5 @@
 import classes from './contact.module.css'
-import { location } from '../../assets/assets'
+import { location,whatsapp,wk,instagram,telegram,number } from '../../assets/assets'
 
 
 export default function Contact() {
@@ -7,6 +7,7 @@ export default function Contact() {
     <div className={classes.contact}>
         <div className="container">
             <div className={classes.contactWrraper}>
+                <div className={classes.contactContainer}>
                 <div className={classes.contactContainerOffice}>
                     <label className={classes.contactOfficeTitle}>Our office</label>
                     <div className={classes.contactOfficeLocation}>
@@ -15,11 +16,38 @@ export default function Contact() {
                     <div className={classes.contactOfficeAddres}>
                         <img src={location} alt="error" />
                         <span className={classes.contactOfficeTextaddred}>
-                            <p className={classes.contactOfficeAddresStreet}></p>
-                            <p className={classes.contactOfficeAddresHome}></p>
+                            <p className={classes.contactOfficeAddresStreet}>Sergeli distrcit,Yangi Sergeli street,12</p>
+                            <p className={classes.contactOfficeAddresHome}>236 xona</p>
                         </span>
                     </div>
                 </div>
+                <div className={classes.contactMedia}>
+                    <span className={classes.contactMediaItems}>
+                    <a className={classes.contactMedialocation}>
+                        <img src={whatsapp} alt="error" />
+                    </a>
+                    </span>
+                    <span className={classes.contactMediaItems}>
+                    <a className={classes.contactMedialocation}>
+                        <img src={wk} alt="error" />
+                    </a>
+                    </span>
+                    <span className={classes.contactMediaItems}>
+                    <a className={classes.contactMedialocation}>
+                        <img src={instagram} alt="error" />
+                    </a>
+                    </span>
+                    <span className={classes.contactMediaItems}>
+                    <a className={classes.contactMedialocation}>
+                        <img src={telegram} alt="error" />
+                    </a>
+                    </span>
+                </div>
+                </div>
+                <span className={classes.contactPhoneNumber}>
+                    <img src={number} alt="error" className={classes.contactNumberImg} />
+                    <span className={classes.contactNumber}>+998 93 552 16 79</span>
+                </span>
             </div>
         </div>
     </div>
