@@ -18,12 +18,9 @@
 }
 
 .cardContainerImg{
+   margin: auto;
    width: 200px;
    height: 237px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: auto;
 }
 .cardImg{
     width: 100%;

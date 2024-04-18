@@ -15,7 +15,7 @@ export  function Card({item}) {
         </div>
         <div className={classes.cardContainerDesc}>
          <div className={classes.cardContainerItems}>
-            <span className={classes.cardName}>{item.title.length >= 18 ? item.title.slice(0,15) : item.title}</span>
+            <span className={classes.cardName}>{item.title.length >= 18 ? item.title.slice(0,10) : item.title}</span>
             <span className={classes.cardPrice}>{item.price}$</span>
          </div>
          <div className={classes.cardContainerRating}>

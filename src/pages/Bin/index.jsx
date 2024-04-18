@@ -1,4 +1,5 @@
 import classes from './bin.module.css'
+import { NavLink as Link } from 'react-router-dom';
 import { Card, Empty } from './../index.jsx'
 import { useSelector } from 'react-redux';
 import { language as ldata } from '../../localization/localization.js'
@@ -31,7 +32,9 @@ export default function Bin() {
               <span className={classes.binTotal}>{ldata[lang].bin.total}</span>
               <span className={classes.binTotalValue}>$ 2.927</span>
             </div>
+            <Link to={'/purches'}>
             <button className={classes.binTotalBtn}>{ldata[lang].bin.next}</button>
+            </Link>
           </div>
             </div>
             </div>
