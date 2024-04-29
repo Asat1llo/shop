@@ -1,10 +1,84 @@
 
+.purchesWrraper{
+  display:flex;
+}
 
 
+.purchesAddres{
+  max-width: 445px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 30px;
+  background-color: #FFFF;
+}
+
+.purchesAddresTitle{
+  min-width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+.purchesAddresTitle span{
+  font-size: 16px;
+  font-weight: 540;
+}
 
 .purchesAddresMap{
-  width: 375px;
-  height: 146px;
+  min-width: 375px;
+  min-height: 146px;
   border: none;
   border-radius: 10px;
+}
+
+.purchesAddresLocation{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 540;
+}
+
+.purchesAddresInput{
+  min-width: 368px;
+  background-color: #D6D6D6;
+  border: none;
+  border-radius: 15px;
+  padding: 14px;
+}
+
+.purchesAddresContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:start;
+  align-items:center;
+  gap: 10px;
+}
+
+.purchesAddresOtherInput:nth-child(odd){
+  max-width: 164px;
+  border: none;
+  border-radius: 15px;
+  padding: 13px;
+  background-color: #D6D6D6;
+}
+.purchesAddresOtherInput{
+  max-width: 173.71px;
+  border: none;
+  border-radius: 15px;
+  padding: 13px;
+  background-color: #D6D6D6;
+}
+
+
+.purchesItems{
+  width: 458px;
+  height: 155px;
+  background-color: red;
+  margin: 5px;
 }

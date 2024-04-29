@@ -6,8 +6,8 @@ export default function Purches() {
   return (
     <div className={classes.purches}>
         <div className="container">
+            <label className={classes.purchesTitle}>Оформление заказа</label>
             <div className={classes.purchesWrraper}>
-              <label className={classes.purchesTitle}>Оформление заказа</label>
               <div className={classes.purchesAddres}>
                <label className={classes.purchesAddresTitle}>Доставка курьером 
                <span className={classes.purchesAddresTitelPrice}>499 ₸</span></label>
@@ -24,6 +24,20 @@ export default function Purches() {
                 <input type="text" className={classes.purchesAddresOtherInput} placeholder='Подъезд'/>
                 <input type="text" className={classes.purchesAddresOtherInput} placeholder='Квартира'/>
                </div>
+              </div>
+              <div className={classes.purchesAbout}>
+                <div className={classes.purchesDescription}>
+                  <label className={classes.purchesDescriptionTitel}>Ваш заказ</label>
+                  <div className={classes.purchesDescriptionContainer}>
+                  <span className={classes.purchesNumbersofPurches}>1x</span>
+                  <span className={classes.purchesDescriptionText}>Наушники Apple BYZ S852I</span>
+                  <span className={classes.purchesDescriptionCost}>₸ 2 927</span>
+                  </div>
+                </div>
+                <div className={classes.purchesPayment}>
+                  <label className={classes.purchesPaymentTitle}>Способ оплаты</label>
+                  
+                </div>
               </div>
             </div>
         </div>
