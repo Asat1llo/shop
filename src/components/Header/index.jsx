@@ -1,10 +1,10 @@
 import classes from './header.module.css'
-import { Menu } from 'antd';
 import { Menu as Drawer} from '../index.jsx'
 import {logo, phone, samsung, apple,xiaomi, bin, favorites,locationn} from '../../assets/assets.jsx'
 import { useState } from 'react';
 import { NavLink as Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { CascadeSelect } from 'primereact/cascadeselect';
 import {language as ldata } from '../../localization/localization.js'
 
 
@@ -22,22 +22,34 @@ export function Header(){
     setOpen(false);
   };
 
-  function getItem(label, key, icon, children, type) {
-    return {
-      key,
-      icon,
-      children,
-      label,
-      type,
-    };
-  }
-  const items = [
-    getItem(ldata[lang].header.brand, 'sub1', <img src={phone} alt="phone" />, [
-      getItem( 'Samsung', 'sub2', <img src={samsung} alt="samsung" />, [getItem('Option 1', '2'), getItem('Option 3', '3')]),
-      getItem('Apple', 'sub3', <img src={apple} alt="apple" />, [getItem('Option 4', '4'), getItem('Option 5', '5')]),
-      getItem('Xiaomi', 'sub4', <img src={xiaomi} alt="xiaomi" />, [getItem('Option 6', '6'), getItem('Option 7', '7')]),
-    ]),
-  ];
+  const [selectedCity, setSelectedCity] = useState(null);
+
+  const phones = [
+    {
+      name:'SAMSUNG',
+      phone:[
+        {name:'A51',},
+        {name:'A22'},
+        {name:'A50'}
+      ]
+    },
+    {
+      name:'APPLE',
+      phone:[
+        {name:'Iphone13',},
+        {name:'Iphone14'},
+        {name:'Iphone15'}
+      ]
+    },
+    {
+      name:'Xiaomi',
+      phone:[
+        {name:'X14',},
+        {name:'X15'},
+        {name:'X16'}
+      ]
+    },
+  ]
 
 
     return(
@@ -52,7 +64,9 @@ export function Header(){
               }
             </div>
             </Link>
-            <Menu rootClassName={classes.headerMenu} mode="inline" items={items}/>
+            <CascadeSelect value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={phones} 
+                optionGroupLabel="name" optionGroupChildren={['phone']}
+                className={classes.headerMenu} breakpoint="767px" placeholder="Select a City" style={{ minWidth: '14rem' }}  />
             </div>
             <div className={classes.headerItems}>
               <div className={classes.headerFavorites}>

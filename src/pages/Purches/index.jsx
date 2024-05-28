@@ -1,8 +1,18 @@
 import classes from './purches.module.css'
+import React, { useState } from "react"
+import { Dropdown } from 'primereact/dropdown'
 import {location} from './../../assets/assets'
 
 
+
 export default function Purches() {
+
+  const [selectedCity, setSelectedCity] = useState(null);
+  const cards = [
+      { name: 'HUMO', code: 'hu' },
+      { name: 'VISA', code: 'vi' },
+  ];
+
   return (
     <div className={classes.purches}>
         <div className="container">
@@ -36,7 +46,10 @@ export default function Purches() {
                 </div>
                 <div className={classes.purchesPayment}>
                   <label className={classes.purchesPaymentTitle}>Способ оплаты</label>
-                  
+                  <div className="card flex justify-content-center">
+                   <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cards} optionLabel="name" 
+                   placeholder="HUMO" className="w-full md:w-14rem" />
+                 </div>
                 </div>
               </div>
             </div>
