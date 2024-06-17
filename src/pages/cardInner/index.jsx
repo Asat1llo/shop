@@ -2,32 +2,27 @@ import classes from './cardInner.module.css'
 import { Collapse } from 'antd';
 import { Toast } from 'primereact/toast';
 import {NavLink as Link, useParams} from 'react-router-dom'
-import { useState,useRef } from 'react';
+import { useState,useRef} from 'react';
 
 import { favorites,bin2,whatsap } from '../../assets/assets.jsx'
 import { language as ldata } from '../../localization/localization.js'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addStoreg } from '../../store/localSlice.js';
 
-export default function cardInner({setRefresh}) {
+export default function cardInner() {
  
   const toast = useRef(null);
   const [data,setData] = useState([])
   const {cardId} = useParams()
-  const showSuccess = () => {
-    toast.current.show({severity:'success', summary: 'Success', detail:'Message Content', life: 3000});
-  }
   const {lang} = useSelector(state=>state.lang)
+  const dispatch = useDispatch()
   async function fetchInner(){
     const res = await fetch(`https://fakestoreapi.com/products/${cardId}`)
     setData(await res.json())
   }  
   fetchInner()
-  const addStore=()=>{
-    const oldata = JSON.parse(localStorage.getItem('data'))
-    oldata.push(data)
-    localStorage.setItem('data',JSON.stringify(oldata))
-    setRefresh(true)
-    showSuccess()
+  const showSuccess = () => {
+    toast.current.show({severity:'success', summary: 'Success', detail:'Message Content', life: 3000});
   }
                 
   return (
@@ -68,7 +63,10 @@ export default function cardInner({setRefresh}) {
                     <Link to={'/bin'}>
                       <button className={classes.innerBtnBuy}>{ldata[lang].inner.buy}!</button>
                     </Link>
-                      <div className={classes.innerBtnBin} onClick={()=>addStore()}>
+                      <div className={classes.innerBtnBin} onClick={()=>{
+                        dispatch(addStoreg(data))
+                        showSuccess()
+                        }}>
                         <img src={bin2} alt="bin" className={classes.innerBin} />
                         <p className={classes.innerBtnText}>{ldata[lang].inner.adbin}</p>
                         </div>

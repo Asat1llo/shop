@@ -12,7 +12,6 @@ import {language as ldata } from '../../localization/localization.js'
 export function Header(){
 
  const {data} = useSelector(state=>state.local)
- const {lang} = useSelector(state=>state.lang)
 
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -64,9 +63,9 @@ export function Header(){
               }
             </div>
             </Link>
-            <CascadeSelect value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={phones} 
+            {/* <CascadeSelect value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={phones} 
                 optionGroupLabel="name" optionGroupChildren={['phone']}
-                className={classes.headerMenu} breakpoint="767px" placeholder="Select a City" style={{ minWidth: '14rem' }}  />
+                className={classes.headerMenu} breakpoint="767px" placeholder="Select a City" style={{ minWidth: '14rem' }}  /> */}
             </div>
             <div className={classes.headerItems}>
               <div className={classes.headerFavorites}>
